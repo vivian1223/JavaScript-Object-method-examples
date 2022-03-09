@@ -15,3 +15,13 @@ const houses = [
 const houseWithWindow = houses.filter(item => {
     return Object.keys(item).toString().includes('window');
 })
+
+// Object.hasOwnProperty(key) 檢查物件是否有特定屬性
+// 如果有該屬性的話會回傳 true 沒有則回傳 false
+const obj = {
+    a: 1,
+    b: 2
+};
+console.log(obj.hasOwnProperty('a'))
+// 也可以使用 call 的方式綁定其他的 context
+console.log(Object.hasOwnProperty.call(obj, 'c'));
